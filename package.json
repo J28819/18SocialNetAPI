@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/J28819/18SocialNetAPI/issues"
   },
-  "homepage": "https://github.com/J28819/18SocialNetAPI#readme"
+  "homepage": "https://github.com/J28819/18SocialNetAPI#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
