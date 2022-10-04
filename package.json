@@ -1,0 +1,24 @@
+{
+  "name": "18socialnetapi",
+  "version": "1.0.0",
+  "description": "Social Network API with MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J28819/18SocialNetAPI.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Express",
+    "Node"
+  ],
+  "author": "Ismael Leal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/J28819/18SocialNetAPI/issues"
+  },
+  "homepage": "https://github.com/J28819/18SocialNetAPI#readme"
+}
