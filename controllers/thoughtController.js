@@ -7,7 +7,6 @@ const thoughtsController = {
           .then(data => {
             return User.findOneAndUpdate({_id: body.userId }, { $push: { thoughts: data._id } },{ new: true });})
           .then(data => {
-            console.log(data);
             if (!data) {
               res.status(404).json({ message: 'User Not found, Please enter the right ID' });
               return;
@@ -28,13 +27,11 @@ const thoughtsController = {
   getThoughtById({params}, res) {
     Thought.findOne({_id: params.id}).populate({path: 'reactions',select: '-__v'}).select('-__v')
       .then(data => {
-        console.log(data)
         res.json(data)
       })
       .catch(err => res.status(404).json(err));
   },
   updateThought({params, body}, res) {
-    console.log(params)
     Thought.findOneAndUpdate({_id: params.id}, body, {new: true, runValidators: true})
       .then(data => {
         if (!data) {
@@ -61,8 +58,6 @@ const thoughtsController = {
 
 
   newReaction({params, body}, res) {
-    console.log(params);
-    console.log(body)
     Thought.findOneAndUpdate({_id: params.thoughtId},{$push: {reactions: body}},{new: true, runValidators: true})
       .then(data => {
         if (!data) {
@@ -76,7 +71,6 @@ const thoughtsController = {
 
   
   deleteReaction({params}, res) {
-    console.log(params)
     Thought.findOneAndUpdate({_id: params.thoughtId},{$pull: {reactions: {reactionId: params.reactionId} }}, {new: true})
     .then(data => res.json([{message:`Reaction Deleted:`},data]))
       .catch(err => res.status(404).json(err));

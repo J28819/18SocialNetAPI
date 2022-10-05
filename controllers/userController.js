@@ -12,7 +12,6 @@ const usersController = {
         User.find({}).populate({path: 'friends',select: '-__v'}).populate({path: 'thoughts',select: '-__v'}).select('-__v')
         .then(data => res.status(200).json(data))
         .catch(err => {
-            console.log(err);
             res.sendStatus(400);
         });
     },
