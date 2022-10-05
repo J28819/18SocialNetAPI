@@ -57,7 +57,14 @@ http://localhost:3001/api/thoughts/633ce411b3a864138b65823e
 
 ## Screenshoots
 Overview
-![My animated logo](./img/overview.png)
+![My animated logo](./img/insomnia.png)
 
 Overview2
-![My animated logo](./img/overview2.png)
+![My animated logo](./img/MongoCompass.png)
+
+## Conclusion 
+
+ Thank you to all the GTBootcamp staff for all the support and teaching that makes this possible.
+
+ ## License
+[MIT](https://choosealicense.com/licenses/mit/)
