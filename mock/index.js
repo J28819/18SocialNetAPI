@@ -1,10 +1,14 @@
 
-import mockdata from './usersMock.json';
 
+var mockdata = require('./usersMock.json');
+console.log(mockdata)
 var request = require('request');
+
+
  function updateClient(postData){
+            console.log(postData)
             var clientServerOptions = {
-                uri: '/api/users',
+                uri: 'http://localhost:3001/api/users',
                 body: JSON.stringify(postData),
                 method: 'POST',
                 headers: {

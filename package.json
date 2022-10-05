@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "mock": "cd mock && node index.js",
+    "mock": "node server.js && node ./mock/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +27,7 @@
     "express": "^4.18.1",
     "moment": "^2.29.4",
     "mongoose": "^6.6.4",
-    "mongose": "^0.0.2-security"
+    "mongose": "^0.0.2-security",
+    "request": "^2.88.2"
   }
 }

@@ -10,7 +10,7 @@ const usersController = {
 
     getUsers(req, res) {
         User.find({}).populate({path: 'friends',select: '-__v'}).populate({path: 'thoughts',select: '-__v'}).select('-__v')
-        .then(data => res.status(200).json({message:`Get All Users!! ${data}`}))
+        .then(data => res.status(200).json(data))
         .catch(err => {
             console.log(err);
             res.sendStatus(400);
@@ -29,7 +29,7 @@ const usersController = {
 
     deleteUser({params}, res) {
         User.findOneAndDelete({ _id: params.id })
-          .then(data => res.json({message:`Successfully deleted user! ${data}`}))
+        .then(data => res.json([{message:`Friend Deleted:`},data]))
           .catch(err =>res.sendStatus(400).json({message:`Cannot update the user:  ${err}` }));
       },
 
@@ -40,13 +40,13 @@ const usersController = {
     },
     addFriends ({params}, res) {
         User.findOneAndUpdate({_id: params.userId}, {$push: { friends: params.friendId}}, {new: true})
-        .then(data => res.json({message:`Friend Added ${data}`}))
+        .then(data => res.json([{message:`Friend added:`},data]))
         .catch(err =>res.sendStatus(400).json({message:`Cannot add the new friend Error:  ${err}` }));
       },
     
     deleteFriend({params}, res) {
         User.findOneAndUpdate({_id:params.userId}, {$pull: { friends: params.friendId}}, {new: true})
-        .then(data => res.json({message:`Friend Deleted ${data}`}))
+        .then(data => res.json([{message:`Friend Deleted:`},data]))
         .catch(err =>res.sendStatus(400).json({message:`Error: trying to Delete:  ${err}` }));
       }
 };

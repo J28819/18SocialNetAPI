@@ -1,4 +1,23 @@
-{
-    "username": "ismael",
-    "email": "ismael@gmail.com"
-}
+[
+    {
+        "username": "Josh",
+        "email": "Josh@gmail.com"
+    },
+    {
+        "username": "Megan",
+        "email": "Megan@gmail.com"
+    },
+    {
+        "username": "Robert",
+        "email": "Robert@gmail.com"
+    },
+    {
+        "username": "Zamael",
+        "email": "Zamael@gmail.com"
+    },
+    {
+        "username": "Sarah",
+        "email": "Sarah@gmail.com"
+    }
+
+]

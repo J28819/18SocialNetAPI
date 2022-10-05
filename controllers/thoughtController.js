@@ -78,7 +78,7 @@ const thoughtsController = {
   deleteReaction({params}, res) {
     console.log(params)
     Thought.findOneAndUpdate({_id: params.thoughtId},{$pull: {reactions: {reactionId: params.reactionId} }}, {new: true})
-    .then(data => res.json({message:`Successfully deleted Thought!! ${data}`}))
+    .then(data => res.json([{message:`Reaction Deleted:`},data]))
       .catch(err => res.status(404).json(err));
   }
 };
