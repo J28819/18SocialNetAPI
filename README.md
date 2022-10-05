@@ -57,7 +57,7 @@ http://localhost:3001/api/thoughts/633ce411b3a864138b65823e
 
 ## Screenshoots
 Overview
-![My animated logo](./img/insomnia.png)
+![My animated logo](./img/Insomnia.png)
 
 Overview2
 ![My animated logo](./img/MongoCompass.png)
